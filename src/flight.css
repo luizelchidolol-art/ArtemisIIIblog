@@ -1,0 +1,208 @@
+.artemis-flight-panel {
+  padding: clamp(1rem, 2vw, 1.75rem);
+  border: 1px solid #3b5180;
+  border-radius: 1.5rem;
+  color: #f5f7fa;
+  background: linear-gradient(155deg, #112347, #0b1832 57%, #10294b);
+  box-shadow: 0 1rem 3rem #03081860;
+}
+.artemis-flight-heading,
+.artemis-flight-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+}
+.artemis-flight-heading {
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.artemis-flight-tag {
+  color: #ffc296;
+  font:
+    700 0.76rem/1.5 system-ui,
+    sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.artemis-flight-panel button,
+.artemis-flight-panel select,
+.artemis-flight-panel label,
+.artemis-flight-metrics {
+  font-family: "Comic Sans MS", "Comic Neue", cursive;
+}
+.artemis-flight-panel button,
+.artemis-flight-panel select {
+  border: 1px solid #526b9b;
+  border-radius: 2rem;
+  background: #172a50;
+  color: #f5f7fa;
+  cursor: pointer;
+  padding: 0.5rem 0.82rem;
+  transition:
+    background 0.2s,
+    border 0.2s,
+    transform 0.2s;
+}
+.artemis-flight-panel button:not(:disabled):hover {
+  background: #294478;
+  border-color: #9db8f0;
+}
+.artemis-flight-panel button:not(:disabled):active {
+  transform: scale(0.96);
+}
+.artemis-flight-panel button:disabled {
+  opacity: 0.48;
+  cursor: default;
+}
+.artemis-flight-panel button[aria-pressed="true"],
+.artemis-flight-panel button[aria-current="step"] {
+  border-color: #ffa674;
+  color: #ffe6d4;
+  background: #483047;
+}
+.artemis-flight-panel button.artemis-flight-primary {
+  background: #b83f09;
+  border-color: #ff9756;
+}
+.artemis-flight-screen {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #385884;
+  border-radius: 1rem;
+  background: radial-gradient(
+    ellipse at 48% 96%,
+    #1c2856,
+    #07152e 55%,
+    #040e21
+  );
+}
+.artemis-flight-screen svg {
+  display: block;
+  width: 100%;
+  max-height: 370px;
+}
+.artemis-flight-countdown {
+  position: absolute;
+  inset: 10% 0 auto;
+  text-align: center;
+  font:
+    700 clamp(1.5rem, 4vw, 3rem)/1.2 "Comic Sans MS",
+    cursive;
+  color: #ffcaa4;
+  text-shadow: 0 0 2rem #ff6a00;
+}
+.artemis-flight-status {
+  margin: 1.2rem 0;
+}
+.artemis-flight-status h3,
+.orion-interior h3,
+.orion-interior h4 {
+  margin: 0 0 0.4rem;
+}
+.artemis-flight-status p,
+.artemis-flight-caption,
+.orion-interior p {
+  margin: 0;
+  color: #c1cdec;
+  line-height: 1.6;
+}
+.artemis-flight-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 0.55rem;
+  margin: 1rem 0;
+}
+.artemis-flight-metrics div {
+  padding: 0.65rem;
+  background: #162b51;
+  border: 1px solid #314c7b;
+  border-radius: 0.7rem;
+}
+.artemis-flight-metrics dt {
+  color: #becdee;
+  line-height: 1.25;
+  font-size: 0.85rem;
+}
+.artemis-flight-metrics dd {
+  margin: 0.3rem 0 0;
+  font-size: 1.12rem;
+  font-weight: bold;
+  font-variant-numeric: tabular-nums;
+}
+.artemis-flight-metrics small {
+  font-size: 0.75rem;
+  color: #becdee;
+}
+.artemis-flight-panel progress {
+  display: block;
+  width: 100%;
+  height: 0.65rem;
+  margin-bottom: 0.8rem;
+  accent-color: #f47738;
+}
+.artemis-flight-stages {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0.8rem 0 1rem;
+  gap: 0.4rem;
+}
+.artemis-flight-stages button {
+  font-size: 0.88rem;
+}
+.artemis-flight-caption {
+  margin-top: 0.8rem;
+  font-size: 0.88rem;
+}
+.artemis-flight-caption a {
+  color: #b6cbff;
+  text-decoration: underline;
+}
+.artemis-flight-exhaust {
+  transform-origin: 0 13px;
+  animation: artemis-exhaust 0.3s ease-in-out infinite alternate;
+}
+@keyframes artemis-exhaust {
+  to {
+    transform: scale(0.91, 0.77);
+    opacity: 0.55;
+  }
+}
+.orion-view svg {
+  cursor: grab;
+  touch-action: none;
+}
+.orion-view svg:active {
+  cursor: grabbing;
+}
+.orion-controls {
+  margin-block: 0.85rem;
+}
+.orion-controls label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.orion-controls input {
+  accent-color: #f47738;
+}
+.orion-interior {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+  gap: 0.8rem;
+}
+.orion-interior > div {
+  padding: 1.25rem;
+  background: #172a50;
+  border-radius: 0.85rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .artemis-flight-panel *,
+  .artemis-flight-panel *::before,
+  .artemis-flight-panel *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,80 @@
+.orion-camera {
+  margin: 0.75rem 0 1rem;
+}
+.orion-camera summary {
+  width: fit-content;
+  cursor: pointer;
+  color: #c8d5f1;
+  padding: 0.4rem 0.1rem;
+  font:
+    1rem "Comic Sans MS",
+    sans-serif;
+}
+.orion-camera summary:focus-visible {
+  outline: 2px solid #feb188;
+}
+.orion-carousel {
+  background: linear-gradient(120deg, #162542, #111d32);
+  border: 1px solid #425573;
+  border-radius: 16px;
+  padding: clamp(0.9rem, 3vw, 1.7rem);
+}
+.orion-carousel-head,
+.orion-carousel-head div {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.orion-carousel-head {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #ffb58f;
+  font:
+    normal 0.85rem/1.4 Consolas,
+    monospace;
+}
+.orion-carousel-head div {
+  color: #d2d9e8;
+  font-variant-numeric: tabular-nums;
+}
+.orion-carousel-head button {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  font:
+    1.7rem/1 Arial,
+    sans-serif;
+}
+.orion-slide {
+  touch-action: pan-y;
+  min-height: 8.2rem;
+}
+.orion-slide h3 {
+  margin: 0.55rem 0;
+  font:
+    normal clamp(1.5rem, 3vw, 2.2rem)/1.15 Georgia,
+    serif;
+}
+.orion-slide p {
+  max-width: 70ch;
+  color: #d2d9e8;
+  margin: 0.4rem 0 1rem;
+}
+.orion-track {
+  display: flex;
+  gap: 5px;
+}
+.orion-track span {
+  flex: 1;
+  height: 3px;
+  border-radius: 4px;
+  background: #394c6a;
+}
+.orion-track .current {
+  background: #ffad81;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .orion-slide > div {
+    animation: appear 0.25s ease-out;
+  }
+}

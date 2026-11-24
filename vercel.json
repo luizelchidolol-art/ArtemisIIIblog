@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/blog/:path*", "destination": "/index.html" },
+    { "source": "/infografia", "destination": "/index.html" },
+    { "source": "/contacto", "destination": "/index.html" },
+    { "source": "/politicas", "destination": "/index.html" },
+    { "source": "/investigacion", "destination": "/index.html" },
+    { "source": "/explorar", "destination": "/index.html" }
+  ]
+}
